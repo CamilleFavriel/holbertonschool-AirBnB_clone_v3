@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Flask web application"""
-from flask import Flask
+from flask import Flask, jsonify
 from models import storage
 from api.v1.views import app_views
 from flask import Blueprint
@@ -11,6 +11,11 @@ app = Flask(__name__)
 
 """register the blueprint app_views"""
 app.register_blueprint(app_views)
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return jsonify(error="Not found")
 
 
 @app.teardown_appcontext

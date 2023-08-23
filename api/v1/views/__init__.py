@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""initialize Blueprint app_views"""
 from flask import Blueprint
 
 

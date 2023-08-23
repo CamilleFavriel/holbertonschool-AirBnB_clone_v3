@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Flask web application"""
 from flask import Flask
 from models import storage
 from api.v1.views import app_views
@@ -7,6 +8,7 @@ import os
 
 """Create an instance of the Flask application"""
 app = Flask(__name__)
+
 """register the blueprint app_views"""
 app.register_blueprint(app_views)
 

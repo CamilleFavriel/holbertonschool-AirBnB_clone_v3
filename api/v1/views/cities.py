@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""State objects that handles all default RESTFul API actions"""
+"""City objects that handles all default RESTFul API actions"""
 from api.v1.views import app_views
 from flask import abort, jsonify, request
 from models import storage

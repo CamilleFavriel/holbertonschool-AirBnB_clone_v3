@@ -141,7 +141,7 @@ class TestFileStorage(unittest.TestCase):
         storage = FileStorage()
         newcity = City(name="Bordeaux", id="idtest_bordeaux")
         newcity.save()
-        result_get = storage.get(int, "idtest_bordeaux")
+        result_get = storage.get(State, "idtest_bordeaux")
         self.assertIsNone(result_get)
 
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")

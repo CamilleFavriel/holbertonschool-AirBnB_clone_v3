@@ -127,7 +127,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertEqual(newcity.id, result_get.id)
 
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
-    def test_get_bad_id(self):
+    def test_get_bad_id_invalid_id(self):
         """Test that get properly objects invalid id"""
         storage = FileStorage()
         newcity = City(name="Paris", id="idtest_paris")
@@ -136,7 +136,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertIsNone(result_get)
 
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
-    def test_get_bad_id(self):
+    def test_get_bad_id_invalid_class(self):
         """Test that get properly objects invalid class"""
         storage = FileStorage()
         newcity = City(name="Bordeaux", id="idtest_bordeaux")

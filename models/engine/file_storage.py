@@ -64,7 +64,7 @@ class FileStorage:
             key = obj.__class__.__name__ + '.' + obj.id
             if key in self.__objects:
                 del self.__objects[key]
-    
+
     def get(self, cls, id):
         """A method to retrieve one object"""
         dictionnary_object = self.__objects.items()

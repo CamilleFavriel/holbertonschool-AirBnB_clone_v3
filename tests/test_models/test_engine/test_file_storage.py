@@ -151,11 +151,11 @@ class TestFileStorage(unittest.TestCase):
         test_len = len(storage.all("City"))
         newcity = City(name="Agen")
         newcity.save()
-        self.assertEqual(test_len + 1, storage.count("City"))
+        self.assertEqual(test_len + 1, storage.count(City))
 
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_count_all(self):
-        """Test all count """
+        """Test count for all classes"""
         storage = FileStorage()
         len_old = len(storage.all())
         newcity = City(name="Brest")
